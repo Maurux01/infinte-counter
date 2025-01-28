@@ -1,6 +1,6 @@
 let counter = 0;
 let intervalId = null;
-const intervalTime = 500; // Intervalo en milisegundos (0.5 segundos)
+const intervalTime = 200; // Intervalo en milisegundos (0.5 segundos)
 
 function updateCounter() {
   document.getElementById('counter').textContent = counter;
