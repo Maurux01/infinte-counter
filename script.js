@@ -1,9 +1,10 @@
 let counter = 0;
 let intervalId = null;
+const intervalTime = 500; // Intervalo en milisegundos (0.5 segundos)
 
 function updateCounter() {
   document.getElementById('counter').textContent = counter;
-  counter = (counter + 1) % 10; // Incrementa y reinicia a 0 después de 9
+  counter++;
 }
 
 function toggleCounter() {
@@ -13,7 +14,7 @@ function toggleCounter() {
     intervalId = null;
     button.textContent = 'Inicio';
   } else {
-    intervalId = setInterval(updateCounter, 1000);
+    intervalId = setInterval(updateCounter, intervalTime);
     button.textContent = 'Pausa';
   }
 }
